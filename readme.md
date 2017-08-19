@@ -1,8 +1,8 @@
 Group Members:
-    >Del Rosario, Abigale
-    >Gamayo, Kristine Mae
-    >Onila, Christian
-    >Victore, Matthew James
+    Del Rosario, Abigale
+    Gamayo, Kristine Mae
+    Onila, Christian
+    Victore, Matthew James
 
 1.) Create a Database named dbforum4
 
@@ -27,8 +27,8 @@ Group Members:
 		post_date DATE NOT NULL
 
 2.) To access the admin privileges:
-	Username: admin
-	Password: admin
+	 Username: admin
+	 Password: admin
  
 		 
 	
