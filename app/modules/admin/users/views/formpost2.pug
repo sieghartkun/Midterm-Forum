@@ -1,0 +1,24 @@
+extends ../../../auth/views/normalNav
+
+
+block content
+        hr
+        h1 Posts
+        hr
+        br
+        <table class="table">
+        <thead class="thead-inverse">
+            tb
+                th Post ID
+                th Post Title
+                th Content
+                //- th Actions
+        each posts in post
+            tr  
+                td= posts.post_id
+                td= posts.post_title
+                td= posts.post_content
+                //- td
+                //-     a(href=`/user/categories/${post.id}`): span.fa.fa-edit
+                //-     | &nbsp;
+                //-     a(href=`/user/categories/${post.id}/remove`): span.fa.fa-remove

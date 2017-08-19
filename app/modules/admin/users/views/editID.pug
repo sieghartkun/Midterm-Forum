@@ -1,0 +1,15 @@
+extends ../../../../templates/master
+
+block content
+    hr
+    h1.title Categories
+    hr
+    <form action = "editCategory2" method ="POST">
+        label Enter the Category ID you want to edit:
+        <input type="number" class="form-control" placeholder="Category ID" name="category_id" required>
+        br
+        label Enter the new category for this ID:
+        <input type="text" class="form-control" placeholder="New Category Name" name="category_name" required>
+        br
+    <button class="btn btn-primary" type="submit">Submit
+       

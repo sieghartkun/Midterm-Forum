@@ -1,0 +1,21 @@
+
+extends ../../../auth/views/normalNav
+
+block content
+    hr
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Categories
+    hr
+
+    <table class="table">
+    <thead class="thead-inverse">
+        tb
+            th Category ID
+            th Category Name
+    each cater in category
+        tr  
+            td= cater.category_id
+            td: a(href=`/admin/categories/${cater.category_id}`)= cater.category_name
+
+                    

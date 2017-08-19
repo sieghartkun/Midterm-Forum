@@ -1,0 +1,52 @@
+
+extends ../../../templates/master
+
+block body
+    // I'm using Bulma's classes here.
+    // Refer to this: http://bulma.io/documentation/layout/container/
+    //- nav.navbar
+    //-     div.navbar-brand
+    //-         a.navbar-item(href="/") Users
+        
+    //-     div.navbar-menu
+    //-         div.navbar-start
+    //-             div.navbar-item.has-dropdown.is-hoverable
+    //-                 a.navbar-link(href="/admin") Admin
+    //-                 div.navbar-dropdown.is-right
+    //-                     a.navbar-item(href="/admin/users") Users
+
+    //-         div.navbar-end
+    //-             div.navbar-item.has-dropdown.is-hoverable
+    //-                 a.navbar-link: span.icon: i.fa.fa-user
+    //-                 div.navbar-dropdown.is-right
+    //-                     a.navbar-item(href="/settings") Settings
+    //-                     a.navbar-item(href="/logout") Log-out
+    br
+    <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+        <a class="nav-link" href="/">Users</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/categories">Categories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/user/categories/adminPrivilege">Admin</a>
+    </li>
+    //- <li class="nav-item">
+    //-     <a class="nav-link" href="/admin/categories/postForm">Posts</a>
+    //- </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/user/categories/post">Posts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disable" href="/logout">Logout</a>
+    </li>
+    </ul>
+                            
+
+    div.container
+        //- This part right here is the dynamic content. Once you extend
+        //- this template, you can place anything here.
+        
+        // This comment marks the dynamic content
+        block content

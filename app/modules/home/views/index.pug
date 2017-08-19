@@ -1,0 +1,40 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../auth/views/normalNav
+
+//- This is how we insert dynamic content to extended templates
+block content
+    hr
+    h1.title Welcome User!
+    p Username and their email if you want to contact them:
+    hr
+    br
+    ul
+        //- This is how we iterate through arrays and access
+        //- their elements
+        //- each usery in user
+        //-     li= `${usery.user_id} - ${usery.user_username}`
+
+        //- <table class="table table-hover">
+        //- thead
+        //-     tb
+        //-         th User ID
+        //-         th Username
+        //-         th Email
+        //- each usery in user
+        //-     tr
+        //-         td= usery.user_id
+        //-         td= usery.user_username
+        //-         td= usery.user_email
+        <table class="table">
+        <thead class="thead-inverse">
+            tb
+                th User ID
+                th Username
+                th Email
+        each user in users
+            tr  
+                td= user.user_id
+                td= user.user_username
+                td= user.user_email
+
+        

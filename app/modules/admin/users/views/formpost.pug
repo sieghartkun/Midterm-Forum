@@ -1,0 +1,78 @@
+extends ../../../auth/views/normalNav
+
+block content
+        hr
+        h1 Add Post:
+        hr
+        br
+        <form action = "post" method ="post">
+        input(type="hidden" name="post_author" value=`${user.user_id}`)
+        input(type="hidden" name="post_date" value=`${user.datetime}`)
+        label Category Name
+        .control
+                select.input(type="category_id" name="category_id")
+                        each category in categories
+                                option(value=category.category_id)= category.category_name
+        label Title
+        <input type="text" class="form-control" placeholder="Post Title" name="post_title" required>
+        label Content
+        <input type="text area" class="form-control" placeholder="Write here ..." name="post_content" required>
+        br
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+
+        hr
+        
+        label Options about Posts:
+        hr
+        h1 Edit Post
+        hr
+        <form action = "editPost" method ="post">
+        label Post ID
+        <input type="number" class="form-control" placeholder="Post ID" name="post_id" required>
+        label New Post Title
+        <input type="text area" class="form-control" placeholder="Write here ..." name="post_title" required>
+        label New Post Content
+        <input type="text area" class="form-control" placeholder="Write here ..." name="post_content" required>
+        br
+        input(type="hidden" name="post_author" value=`${user.user_id}`)
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        br
+        hr
+        h1 Delete Post
+        hr
+        <form action = "deletePost" method ="post">
+        label Post ID
+        <input type="number" class="form-control" placeholder="Post ID" name="post_id">
+        input(type="hidden" name="post_author" value=`${user.user_id}`)
+        br
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        
+        //- hr
+        //- h1 Edit Post:
+        //- <form action = "editPost" method ="post">
+        //- hr
+        //- label Post Title
+        //- <input type="text" class="form-control" placeholder="Post Title" name="post_title" required>
+        //- label Content
+        //- <input type="text area" class="form-control" placeholder="Edit content here ..." name="post_content" required>
+        //- input(type="hidden" name="post_author" value=`${user.user_id}`)
+        //- <button class="btn btn-primary" type="submit">Submit
+        //- </form>
+        //- hr
+        //- br
+        //- hr
+        //- h1 Delete Post:
+        //- <form action "deletePost" method ="post">
+        //- hr
+        //- label Post Title
+        //- <input type="text" class="form-control" placeholder="Post Title" name="post_title" required>
+        //- <button class="btn btn-primary" type="submit">Submit
+
+        //- label Category Name:
+        //-     <select name="category_name">
+        //-      each cater in category
+        //-         option cater.category_name

@@ -1,0 +1,43 @@
+extends ../../../templates/master
+
+block content
+    - var hasIncorrect = typeof incorrect !== 'undefined' ? 'Incorrect username or password.' : ''
+    - var hasUnauthorized = typeof unauthorized !== 'undefined' ? 'You are not authorized to view the page you\'re trying to access. Please log in first.' : ''
+
+    section.hero.is-dark
+        .hero-body
+            if hasIncorrect || hasUnauthorized
+                .notification.is-danger
+                    | #{hasIncorrect || hasUnauthorized}
+            body
+            <div id="header">
+            <h1> Welcome to our Forum! </h1>
+            
+            <ul align="left">
+            //- <li>
+            //- a(href = '/home') HOME </a> 
+            //- a(href = 'users/')  </a>  
+            //- a(href = 'home/about') ABOUT </a> 
+            //- a(href = '')  </a>
+
+            <hr>
+            
+            
+            <div id="section">
+            form(method="POST" action="login")
+                .field
+                    .label Username
+                    .control
+                        input.input(type="text" placeholder="Username" name="user_name")
+                .field
+                    .label Password:
+                    .control
+                        input.input(type="password" placeholder="Password" name="user_password")
+                <br>
+                input(type="submit" value="Login") 
+                <br>
+            a(class = "button_signUp" href='signup') Sign Up     
+            </div>             
+            <div id="footer">
+            COPYRIGHT 2017
+            </div>             

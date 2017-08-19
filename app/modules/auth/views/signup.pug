@@ -1,0 +1,44 @@
+extends ../../../templates/base
+
+block body
+    hr
+    h2 Sign Up Form:
+    hr
+    <form action = "signup" method ="POST">
+        label Username
+        <input type="text" class="form-control" placeholder="Username" name="user_username" required>
+
+        label Password
+        <input type="password" class="form-control" placeholder="Password" name="user_password" required>
+        
+    
+       
+        label Email Address
+        <input type="email" class="form-control" placeholder="Email Address" name="user_email" required>
+        
+        
+        label Birthdate
+        <input type="date" class="form-control" placeholder="Birthdate" name="user_birthdate" required>
+        
+        label User Type
+        //<input type="text" class="form-control" placeholder="Normal or Admin" name="user_usertype" required>
+        //<div class="invalid-feedback">
+        
+        <div class="field">
+        <p class="control has-icons-left">
+            <span class="select">
+            <select name="user_usertype">
+                //- <option></option>
+                //- <option>Admin</option>
+                <option> Normal
+            </select>
+            </span>
+            <span class="icon is-small is-left">
+            <i class="fa fa-user"></i>
+            </span>
+        </p>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit
+    </form>

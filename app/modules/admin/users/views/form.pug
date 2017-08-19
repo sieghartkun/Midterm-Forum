@@ -1,0 +1,15 @@
+extends ../../../../templates/master
+
+block content
+    h1.title Add Category
+        
+
+    form(method="POST" action="new")
+        
+        .field
+            .labelCategory Add New Category
+            .control
+                br
+                input.input(type="text" name="category_name" placeholder="New Category")
+        br
+        input.button.is-primary(type="submit" value="Submit")

@@ -1,0 +1,17 @@
+extends ../../../../templates/master
+
+block content
+    hr
+    h1.title Hello! Please let us validate if you're the Admin:
+    hr
+    <form action = "addAndedit" method ="POST">
+    label Email
+    <input type="email" class="form-control" placeholder="Email Address" name="user_email" required>
+
+    label Username
+    <input type="text" class="form-control" placeholder="Username" name="user_name" required>
+
+    label Password
+    <input type="password" class="form-control" placeholder="Password" name="user_password" required>
+    br
+    input.button.is-primary(type="submit" value="Submit")

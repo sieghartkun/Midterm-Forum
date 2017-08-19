@@ -1,0 +1,34 @@
+
+extends ../../../templates/master
+
+block body
+    
+    br
+    <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+        <a class="nav-link" href="/">Users</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/user/categories">Categories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="/user/categories">Admin</a>
+    </li>
+    //- <li class="nav-item">
+    //-     <a class="nav-link" href="/admin/categories/postForm">Posts</a>
+    //- </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/user/categories/post">Posts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disable" href="/logout">Logout</a>
+    </li>
+    </ul>
+                            
+
+    div.container
+        //- This part right here is the dynamic content. Once you extend
+        //- this template, you can place anything here.
+        
+        // This comment marks the dynamic content
+        block content
