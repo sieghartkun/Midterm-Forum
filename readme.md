@@ -1,8 +1,8 @@
 Group Members:
-    Del Rosario, Abigale
-    Gamayo, Kristine Mae
-    Onila, Christian
-    Victore, Matthew James
+    >Del Rosario, Abigale
+    >Gamayo, Kristine Mae
+    >Onila, Christian
+    >Victore, Matthew James
 
 1.) Create a Database named dbforum4
 
